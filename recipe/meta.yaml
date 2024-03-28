@@ -1,5 +1,5 @@
 {% set name = "gekko" %}
-{% set version = "1.0.7" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/gekko-{{ version }}.tar.gz
-  sha256: 317a31ade8e0f902606a316ff03819c38e0d789b931cd0412bf96c5a09b29896
+  sha256: 7489887f9cd1e920b3b60ac56da46bcf89cb975673248c8f2c33462152e839d8
 
 build:
   noarch: python
