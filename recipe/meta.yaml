@@ -1,5 +1,5 @@
 {% set name = "gekko" %}
-{% set version = "1.2.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gekko-{{ version }}.tar.gz
-  sha256: 6b7232eb507725d74b7848a569ae59d2c9907a98e47f236be26382131fb52e53
+  sha256: 4bfb8703550f3d7d79f593a4fef22d495599e1556ed41ca585cf7c2ec940bad2
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ build:
     - rm -rf gekko/bin  # [not win] remove packaged files in sdist
     - rd /s /q "gekko\bin"  # [win]
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
